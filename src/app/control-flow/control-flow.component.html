@@ -1,0 +1,42 @@
+<h2>If</h2>
+@if(show){
+  I got shown
+} @else{
+ This not
+}
+
+<h2>for</h2>
+<ul>
+@for(u of users;track u.id){
+  <li>{{u.name}}</li>
+}
+</ul>
+
+@for(u of [];track u){
+   ...
+} @empty{
+  empty list
+}
+
+<h2>switch</h2>
+@switch(userCount){
+@case (0) { no one }
+@case (1) { only one}
+@case (2) { two are okay}
+@default {more than we need}
+}
+
+<h2>defer</h2>
+<button #btn>click to load</button>
+@defer(on interaction(btn)){
+  <app-large-child></app-large-child>
+} @loading (minimum 5s){
+  <img src="/assets/load.gif">
+}
+
+<h2 style="margin-bottom: 500px">scroll down to viewport defer</h2>
+@defer(on viewport){
+<app-second-large-child></app-second-large-child>
+} @placeholder{
+ <div></div>
+}

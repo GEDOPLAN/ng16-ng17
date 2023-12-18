@@ -1,0 +1,21 @@
+<main>
+  <nav>
+    <div class="title">
+      <h1>GEDOPLAN</h1>
+      <h2>{{titleText}}</h2>
+
+      <div class="links">
+        @for (l of links; track l){
+        <button [routerLink]="l.url">{{l.label}}</button>
+        }
+      </div>
+    </div>
+    <img src='/assets/G.png'>
+  </nav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</main>
+<footer>
+  by GEDOPLAN, Dominik Mathmann
+</footer>
