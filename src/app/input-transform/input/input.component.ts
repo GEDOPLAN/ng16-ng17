@@ -17,6 +17,17 @@ export class InputComponent {
 
   @Input({transform: transformValue})
   value2Transformed?: string;
+
+  _oldSchool = '';
+
+  @Input({required: true})
+  set oldSchool(v:string){
+    this._oldSchool = v.toUpperCase();
+  }
+
+  get oldSchool(){
+    return this._oldSchool;
+  }
 }
 
 function transformValue(v: string) {
