@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="savedValue=form.value">
+  CustomerType <app-customer-type-selector formControlName="type"/>
+  CustomerNumber <app-customer-number-v-v formControlName="number"/>
+  {{form.get('number')?.errors | json}}
+
+  <footer>
+    <button type="submit" [disabled]="form.invalid">save</button>
+    <button type="reset">cancel</button>
+  </footer>
+</form>
+
+{{savedValue | json}}<br/>

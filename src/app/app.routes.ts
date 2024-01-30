@@ -5,6 +5,7 @@ import {ControlFlowComponent} from './control-flow/control-flow.component';
 import {InputTransformComponent} from './input-transform/input-transform.component';
 import {MyService} from './standalone/my.service';
 import {RouteInputComponent} from './route-input/route-input.component';
+import {FormDemoComponent} from './form-demo/form-demo.component';
 
 export const routes: Routes = [
   {path: 'signals', component: SignalsComponent, providers: [
@@ -19,4 +20,5 @@ export const routes: Routes = [
   {path: 'input-transform', component: InputTransformComponent},
   {path: 'route-input', redirectTo: 'route-input/path01'},
   {path: 'route-input/:pathParam', component: RouteInputComponent},
+  {path: 'form', component: FormDemoComponent},
 ];

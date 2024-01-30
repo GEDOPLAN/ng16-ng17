@@ -1,0 +1,6 @@
+<select [formControl]="control">
+  <option></option>
+  @for(type of availableTypes;track type){
+    <option [value]="type">{{type}}</option>
+  }
+</select>
