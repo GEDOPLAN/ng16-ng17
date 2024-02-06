@@ -1,0 +1,17 @@
+:host {
+  .cards {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .roleContainer {
+    position: relative;
+
+    mat-icon {
+      width: 48px;
+      height: 48px;
+      font-size: 48px;
+    }
+  }
+}

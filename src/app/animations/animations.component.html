@@ -1,0 +1,56 @@
+<button mat-raised-button color="primary" (click)="animationIn='size';load=!load;" @fadeIn>load items</button>
+<div class="cards">
+  @if (load) {
+    <mat-card [@in]="animationIn">
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+    <mat-card [@in]="animationIn">
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+    <mat-card [@in]="animationIn">
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+  }
+</div>
+<button mat-raised-button color="primary" (click)="load2=!load2;" @fadeIn>load items</button>
+<div class="cards" [@staggerItems]="load2">
+  @if (load2) {
+    <mat-card @staggerItem>
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+    <mat-card @staggerItem>
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+    <mat-card @staggerItem>
+      <mat-card-header>Lorem Ipsum</mat-card-header>
+      <mat-card-content>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </mat-card-content>
+    </mat-card>
+  }
+</div>
+<button mat-raised-button color="primary" (click)="rolling=!rolling;" @fadeIn [@colorFlip]="rollingFinish" (@colorFlip.done)="rollingFinish=false">keep rolling</button>
+<div class="roleContainer">
+  <mat-icon [@rolling]="rolling" (@rolling.done)="rollingDone($event)" color="primary">sentiment_very_satisfied</mat-icon>
+</div>

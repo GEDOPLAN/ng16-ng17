@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import {Component} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {DemoApplicationComponent} from './demo-application/demo-application.component';
 
 @Component({
