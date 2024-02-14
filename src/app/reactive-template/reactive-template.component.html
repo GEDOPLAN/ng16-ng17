@@ -1,0 +1,7 @@
+@if(loadUser$ | async; as user){
+  <!-- or *ngIf="loadUser$ | async as" -->
+  Hello: {{user.username}}
+  <div>{{user | json}}</div>
+} @else{
+  ...wait until data is loaded...
+}

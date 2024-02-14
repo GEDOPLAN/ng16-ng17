@@ -7,6 +7,7 @@ import {MyService} from './standalone/my.service';
 import {RouteInputComponent} from './route-input/route-input.component';
 import {FormDemoComponent} from './form-demo/form-demo.component';
 import {AnimationsComponent} from './animations/animation.component';
+import {ReactiveTemplateComponent} from './reactive-template/reactive-template.component';
 
 export const routes: Routes = [
   {path: 'signals', component: SignalsComponent, providers: [
@@ -23,4 +24,5 @@ export const routes: Routes = [
   {path: 'route-input/:pathParam', component: RouteInputComponent},
   {path: 'form', component: FormDemoComponent},
   {path: 'animations', component: AnimationsComponent},
+  {path: 'reactive-template', component: ReactiveTemplateComponent},
 ];
