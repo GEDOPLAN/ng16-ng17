@@ -5,3 +5,12 @@
 } @else{
   ...wait until data is loaded...
 }
+
+Sidenote:
+@if(getSomeDate(); as msg){
+  <div>Works as well: {{msg}}</div>
+}
+
+<div *ngIf="getSomeDate() as msg">
+  Works as well: {{msg}}
+</div>

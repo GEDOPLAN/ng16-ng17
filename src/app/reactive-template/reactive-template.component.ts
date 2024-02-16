@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {delay, Observable} from 'rxjs';
 import {CommonModule} from '@angular/common';
@@ -23,5 +23,9 @@ export class ReactiveTemplateComponent {
     // this.httpClient.get('https://jsonplaceholder.typicode.com/users/1').subscribe(user => {
     //   this.user = user;
     // })
+  }
+
+  getSomeDate() {
+    return 'lorem ipsum';
   }
 }

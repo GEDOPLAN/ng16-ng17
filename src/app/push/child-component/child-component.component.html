@@ -1,0 +1,15 @@
+<div>
+  <button (click)="dateService.update()">update by child</button>
+  <button (click)="someEvent.emit()">fire event</button>
+  <div>child-component works:
+    <ul>
+      <li>Input: {{ inputUser?.id }}</li>
+      <li>Service Ref: {{ dateService.user.id }}</li>
+      <li *ngIf="withObservableAndAsync && (dateService.cUserObs | async) as user">Observable: {{ user.id }}</li>
+      <li *ngIf="withObservableWithoutAsync">manual Observable subscribe: {{ userIdByManualObservableSubscription }}</li>
+      <li *ngIf="withSignal">Signal: {{ dateService.cUserSignal().id }}</li>
+    </ul>
+
+  </div>
+
+</div>

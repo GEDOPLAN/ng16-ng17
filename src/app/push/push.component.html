@@ -1,0 +1,23 @@
+<button (click)="dateService.update()">update by parent</button>
+<button (click)="load()">load data</button>
+<div>
+  push works: {{ dateService.user.id }}
+</div>
+<div>
+  <app-child-component [inputUser]="dateService.user"></app-child-component>
+</div>
+<div>
+  <app-child-component [withObservableAndAsync]="false"></app-child-component>
+</div>
+<div>
+  <app-child-component [withSignal]="false"></app-child-component>
+</div>
+<div>
+  <app-child-component [withSignal]="false" [withObservableAndAsync]="false" [withObservableWithoutAsync]="true"></app-child-component>
+</div>
+<div>
+  <app-child-component [withSignal]="false" [withObservableAndAsync]="false"></app-child-component>
+</div>
+<div>
+  <app-child-component [inputUser]="dateService.user" [withSignal]="false" [withObservableAndAsync]="false"></app-child-component>
+</div>
