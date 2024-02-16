@@ -14,6 +14,9 @@ export class SignalsComponent {
   materialLabel = computed(() => `${this.material().id}:${this.material().name} (${new Date().getTime()})`);
   materialEffect = '';
 
+  ioOld?: string;
+  ioNew?: string;
+
   constructor(myService: MyService) {
     effect(() => {
       console.log('Value has been changed...');

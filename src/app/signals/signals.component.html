@@ -4,3 +4,15 @@
 <footer>
   <button (click)="changeMaterial()">changMaterial</button>
 </footer>
+
+<app-signals-io
+  oi="Hello World"
+  si="Hello World"
+  oldModelInput="Initial Value"
+  (oldModelInputChanged)="ioOld = $event"
+  newModel="Initial Value"
+  (newModelChange)="ioNew = $event"
+>
+</app-signals-io>
+
+{{ ioOld }} <> {{ ioNew }}
