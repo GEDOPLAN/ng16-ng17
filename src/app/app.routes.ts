@@ -8,6 +8,7 @@ import {RouteInputComponent} from './route-input/route-input.component';
 import {FormDemoComponent} from './form-demo/form-demo.component';
 import {AnimationsComponent} from './animations/animation.component';
 import {ReactiveTemplateComponent} from './reactive-template/reactive-template.component';
+import {DirectiveCompositionComponent} from './directive-composition/directive-composition.component';
 
 export const routes: Routes = [
   {path: 'signals', component: SignalsComponent, providers: [
@@ -25,4 +26,5 @@ export const routes: Routes = [
   {path: 'form', component: FormDemoComponent},
   {path: 'animations', component: AnimationsComponent},
   {path: 'reactive-template', component: ReactiveTemplateComponent},
+  {path: 'directive-composition', component: DirectiveCompositionComponent},
 ];

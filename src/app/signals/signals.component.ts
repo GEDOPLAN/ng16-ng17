@@ -1,15 +1,15 @@
 import {Component, computed, effect, signal} from '@angular/core';
 import {MyService} from '../standalone/my.service';
+import {SignalsIOComponent} from './signals-io/signals-io.component';
 
 @Component({
   selector: 'app-signals',
   standalone: true,
-  imports: [],
+  imports: [SignalsIOComponent],
   templateUrl: './signals.component.html',
   styleUrl: './signals.component.scss'
 })
 export class SignalsComponent {
-  someId = signal(1);
   material = signal({id: 5, name: 'some material'}, {equal: (a, b) => a.id === b.id});
   materialLabel = computed(() => `${this.material().id}:${this.material().name} (${new Date().getTime()})`);
   materialEffect = '';

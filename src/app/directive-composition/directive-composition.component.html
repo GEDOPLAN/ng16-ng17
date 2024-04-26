@@ -1,0 +1,10 @@
+<article>
+  <h1>without directive</h1>
+  <div>{{text}}</div>
+</article>
+
+<article>
+  <h1>with directive</h1>
+  <div appShowToolTipIfTruncated>{{text}}</div>
+</article>
+<button mat-button (click)="text=text + ' ' + text">add text</button>
